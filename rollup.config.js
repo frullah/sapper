@@ -25,21 +25,7 @@ function template(kind, external) {
 		output: {
 			file: `runtime/${kind}.mjs`,
 			format: 'es',
-			paths: id => {
-				id = id.replace('@sapper', '.');
-				
-				const mjsFileRegex = /(internal\/(manifest-(client|server)|shared))/;
-				if (mjsFileRegex.test(id)) {
-					id += '.mjs';
-				}
-
-				const mjsFileIndexRegex = /svelte\/store/;
-				if (mjsFileIndexRegex.test(id)) {
-					id += '/index.mjs';
-				}
-
-				return id;
-			}
+			paths: id => id.replace('@sapper', '.')
 		},
 		external,
 		plugins: [

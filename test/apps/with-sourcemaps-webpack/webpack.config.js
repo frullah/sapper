@@ -15,6 +15,12 @@ module.exports = {
 		module: {
 			rules: [
 				{
+					test: /\.m?js/,
+					resolve: {
+						fullySpecified: false
+					}
+				},
+				{
 					test: /\.(html|svelte)$/,
 					use: {
 						loader: 'svelte-loader',
@@ -48,6 +54,12 @@ module.exports = {
 		},
 		module: {
 			rules: [
+				{
+					test: /\.m?js/,
+					resolve: {
+						fullySpecified: false
+					}
+				},
 				{
 					test: /\.(html|svelte)$/,
 					use: {
