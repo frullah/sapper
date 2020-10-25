@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable } from 'svelte/store/index.mjs';
 
 export const CONTEXT_KEY = {};
 
